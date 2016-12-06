@@ -79,6 +79,8 @@ html {
   font-size: 62.5%;
 }
 body {
+  background-color: #000;
+  font-family: Arial;
   display: flex;
   display: -webkit-flex;
   font-display: swap;
@@ -103,9 +105,6 @@ input::-moz-focus-inner {
   flex: 1;
 }
 /*** standart classes *****/
-p {
-  line-height: 16px;
-}
 a {
   color: #020000;
 }
@@ -143,7 +142,7 @@ input::-moz-focus-inner {
   position: absolute;
 }
 .form-control {
-  border: 1px solid #f4f4f4;
+  border: 1px solid #3a3a3a;
   border-radius: 0;
   margin-top: 0.6rem;
   font-size: 16px;
@@ -155,51 +154,193 @@ input::-moz-focus-inner {
 }
 /* =panel
 ---------------------------*/
-.panel {
-  background: rgba(0, 0, 0, 0.6);
+.panelbase {
   position: fixed;
   min-height: 656px;
   overflow: hidden;
-  top: 0;
-  left: 0;
   height: 100%;
-  width: 24rem;
+  top: 0;
+}
+.panel {
+  background-color: #0b0b0b;
+  position: fixed;
+  min-height: 656px;
+  overflow: hidden;
+  height: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   color: #fff;
+  flex-flow: column;
+  left: 0;
+  z-index: 500;
+  width: 24rem;
 }
 .panel a {
   color: #fff;
   text-decoration: none;
 }
-.panel nav {
-  padding-left: 5rem;
+.panel .logo {
+  margin-top: .8rem;
+  text-align: center;
 }
-.panel nav ul li {
+.panel .logo_nav {
+  height: 100%;
+}
+.panel nav {
+  margin-top: 6rem;
+}
+.panel nav > ul {
+  position: relative;
+  z-index: 999;
+}
+.panel nav > ul > li {
   font-size: 18px;
   font-size: 1.8rem;
   position: relative;
 }
-.panel nav ul li:before {
+.panel nav > ul > li:before {
   content: "";
   display: block;
   position: absolute;
-  left: 0;
-  top: 5px;
+  left: 50px;
+  top: 50%;
   width: 12px;
   height: 1px;
   background: rgba(255, 255, 255, 0.5);
 }
+.panel nav > ul > li a {
+  display: block;
+  line-height: 1;
+  padding-left: 7.5rem;
+  padding-bottom: 1.6rem;
+  padding-top: 1.6rem;
+  transition: background-color 0.4s;
+}
+.panel nav > ul > li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.panel nav > ul > li:hover {
+  background-color: #fff;
+}
+.panel nav > ul > li:hover:before {
+  background-color: #000;
+}
+.panel nav > ul > li:hover a {
+  color: #000;
+}
+.panel .contacts_social {
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+}
+.panel .contacts_social .contacts__item {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  position: relative;
+}
+.panel .contacts_social .contacts__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 2rem;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+.panel .contacts_social .contacts__item .remark {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+.panel .contacts_social .social {
+  padding-top: 3.5rem;
+}
+.panel .contacts_social .social a {
+  border: 1px solid #3a3a3a;
+  display: inline-block;
+  height: 4rem;
+  margin-right: 5px;
+  width: 4rem;
+  text-align: center;
+}
+.subnav {
+  background-color: #fff;
+  -webkit-transition: left 0.6s cubic-bezier(0.45, 0.035, 0.045, 0.95);
+  -moz-transition: left 0.6s cubic-bezier(0.45, 0.035, 0.045, 0.95);
+  -o-transition: left 0.6s cubic-bezier(0.45, 0.035, 0.045, 0.95);
+  transition: left 0.6s cubic-bezier(0.45, 0.035, 0.045, 0.95);
+  position: fixed;
+  min-height: 656px;
+  overflow: hidden;
+  height: 100%;
+  top: 0;
+}
+.subnav .title {
+  font-size: 22px;
+  font-size: 2.2rem;
+  padding-top: 3.5rem;
+  padding-left: 4rem;
+  padding-bottom: 2rem;
+}
+.subnav ul li a {
+  display: block;
+  padding-bottom: 1.2rem;
+  padding-left: 4rem;
+  padding-top: 1.2rem;
+  text-decoration: none;
+}
+.subnav ul li a:hover {
+  text-decoration: none;
+  background: #ccc;
+  color: #fff;
+}
+.subnav-lev1 {
+  left: -3rem;
+  width: 26.8rem;
+  z-index: 100;
+}
+.subnav-lev2 {
+  left: -3rem;
+  width: 26.8rem;
+  z-index: 99;
+}
+.subnav_content {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.subnav_content.subnav_content-active {
+  opacity: 1;
+  z-index: 10;
+}
+.l-with-subnav1 .subnav-lev1 {
+  left: 24rem;
+}
+.l-with-subnav1 .subnav-lev2 {
+  left: 24rem;
+}
+.l-with-subnav2 .subnav-lev2 {
+  left: 50.8rem;
+}
 /* =/panel
 ---------------------------*/
-/* =header
+/* =main
 ---------------------------*/
-/* =/header
+.main {
+  min-height: 100%;
+  margin-left: 24rem;
+}
+/* =/main
 ---------------------------*/
 /* =footer
 ---------------------------*/
-footer {
-  height: 40px;
-  background: #FFCC00;
-}
 ::-ms-clear {
   display: none;
 }
