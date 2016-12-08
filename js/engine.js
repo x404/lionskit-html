@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('.panel nav li a').hover(
 		function(){
 			var $this = $(this),
@@ -50,7 +51,48 @@ $(document).ready(function(){
 	$('.main').hover(function(){
 		$('body').removeClass('l-with-subnav1')
 		$('body').removeClass('l-with-subnav2')
-	})
+	});
+
+
+	$('#foo1').owlCarousel({
+		loop: true,
+		autoplay : false,
+		autoplayTimeout : 6000,
+		autoplayHoverPause : true,
+		animateOut: 'fadeOut',
+		nav: true,
+		dots: false,
+		items:1,
+		lazyLoad: true,
+		navText: ["", ""]
+	});
+
+	$('#foo2').owlCarousel({
+		loop: true,
+		autoplay : true,
+		autoplayTimeout : 6000,
+		autoplayHoverPause : true,
+		animateOut: 'fadeOut',
+		nav: true,
+		dots: false,
+		items:1,
+		lazyLoad: true,
+		navText: ["", ""],
+	});
+
+	$('#foo3').owlCarousel({
+		loop: true,
+		autoplay : true,
+		autoplayTimeout : 6000,
+		autoplayHoverPause : true,
+		animateOut: 'fadeOut',
+		nav: true,
+		dots: false,
+		items:1,
+		lazyLoad: true,
+		navText: ["", ""],
+	});
+
 })
 
 
