@@ -214,3 +214,8 @@
   position: relative;
   z-index: 1;
 }
+
+.owl-dots.disabled,
+.owl-nav.disabled{
+	display: none !important;
+}

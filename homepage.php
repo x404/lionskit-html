@@ -14,6 +14,7 @@
 <title>Главная</title>
 <link rel="stylesheet" href="css/owl.carousel.css" />
 <link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="css/slick.css" />
 <link rel="stylesheet" href="css/styles.css" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -136,6 +137,13 @@
 		<!-- =/subnav2 -->
 	</div>
 
+	<figure class="home_bg">
+		<div class="carousel" id="home_bg_slider">
+			<div class="carousel_item" style="background-image: url('/images/bg-1.jpg')"></div>
+			<div class="carousel_item" style="background-image: url('/images/bg-2.jpg')"></div>
+		</div>
+	</figure>
+
 	<div class="main">
 		<!-- =content -->
 		<div class="content">
@@ -167,9 +175,10 @@
 	</div>
 </div>
 
-<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
+<!-- <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script> -->
+<!-- <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script> -->
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/engine.js"></script>
 </body>
 </html>

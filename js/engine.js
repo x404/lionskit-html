@@ -53,7 +53,27 @@ $(document).ready(function(){
 		$('body').removeClass('l-with-subnav2')
 	});
 
-	
+
+	$('#home_bg_slider').slick({
+		arrows : false,
+		dots: false,
+		autoplay: true,
+		adaptiveHeight : true,
+		autoplaySpeed : 5000,
+		fade: true,
+		cssEase: 'linear'
+	})
+
+	// $('#home_bg_slider').owlCarousel({
+	// 	loop: true,
+	// 	autoplay : false,
+	// 	autoplayTimeout : 5000,
+	// 	animateOut: 'fadeOut',
+	// 	nav: false,
+	// 	dots: false,
+	// 	items:1,
+	// 	lazyLoad: true
+	// });
 
 
 	$('#foo1').owlCarousel({
@@ -62,11 +82,10 @@ $(document).ready(function(){
 		autoplayTimeout : 6000,
 		autoplayHoverPause : true,
 		animateOut: 'fadeOut',
-		nav: true,
+		nav: false,
 		dots: false,
 		items:1,
-		lazyLoad: true,
-		navText: ["", ""]
+		lazyLoad: true
 	});
 
 	$('#foo2').owlCarousel({
@@ -75,11 +94,10 @@ $(document).ready(function(){
 		autoplayTimeout : 8000,
 		autoplayHoverPause : true,
 		animateOut: 'fadeOut',
-		nav: true,
+		nav: false,
 		dots: false,
 		items:1,
-		lazyLoad: true,
-		navText: ["", ""],
+		lazyLoad: true
 	});
 
 	$('#foo3').owlCarousel({
@@ -88,11 +106,10 @@ $(document).ready(function(){
 		autoplayTimeout : 11000,
 		autoplayHoverPause : true,
 		animateOut: 'fadeOut',
-		nav: true,
+		nav: false,
 		dots: false,
 		items:1,
-		lazyLoad: true,
-		navText: ["", ""],
+		lazyLoad: true
 	});
 
 })
