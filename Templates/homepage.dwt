@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ru"><!-- InstanceBegin template="/Templates/homepage.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="ru">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -10,12 +10,12 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
 <meta name="robots" content="noindex,nofollow" />
-<!-- InstanceBeginEditable name="doctitle" -->
+<!-- TemplateBeginEditable name="doctitle" -->
 <title>Главная</title>
-<!-- InstanceEndEditable -->
-<link rel="stylesheet" href="css/owl.carousel.css" />
-<link rel="stylesheet" href="css/slick.css" />
-<link rel="stylesheet" href="css/styles.css" />
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../css/owl.carousel.css" />
+<link rel="stylesheet" href="../css/slick.css" />
+<link rel="stylesheet" href="../css/styles.css" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>')</script>
@@ -31,8 +31,8 @@
 <!--[if (gte IE 5.5)&(lte IE 8)]>
 	<script type="text/javascript" src="js/selectivizr.js"></script>
 <![endif]-->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 </head>
 <body>
 
@@ -42,7 +42,7 @@
 		<div class="panel">
 			<div class="logo_nav">
 				<div class="logo">
-					<a href="/" title=""><img src="images/logo.png" alt=""></a>
+					<a href="/" title=""><img src="../images/logo.png" alt=""></a>
 				</div>
 				<nav>
 					<ul>
@@ -53,16 +53,16 @@
 							<a href="#" title="" data-name="catalog">Каталог</a>
 						</li>
 						<li>
-							<a href="projects.html" title="" data-name="projects">Проекты</a>
+							<a href="../projects.html" title="" data-name="projects">Проекты</a>
 						</li>
 						<li>
-							<a href="articles.html" title="">Статьи</a>
+							<a href="../articles.html" title="">Статьи</a>
 						</li>
 						<li>
-							<a href="reviews.html" title="" >Отзывы</a>
+							<a href="../reviews.html" title="" >Отзывы</a>
 						</li>
 						<li>
-							<a href="contacts.html" title="">Контакты</a>
+							<a href="../contacts.html" title="">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -139,61 +139,14 @@
 		<!-- =/subnav2 -->
 	</div>
 	
-	<!-- InstanceBeginEditable name="EditRegion3" -->
-	
-	<figure class="home_bg">
-		<div class="carousel" id="home_bg_slider">
-			<div class="carousel_item" style="background-image: url('/images/bg-1.jpg')"></div>
-			<div class="carousel_item" style="background-image: url('/images/bg-2.jpg')"></div>
-		</div>
-	</figure>
-
-	<div class="main">
-		<!-- =content -->
-		<div class="content">
-			<div class="content_wrapper">
-				<p class="above">ТЮННИНГ</p>
-				<h1>Изготовление обвесов</h1>
-				<p>LION'S KIT - это молодой красноярский бренд, занимающийся производством, установкой и ремонтом кузовных и других деталей из стеклопластика. Также мы работаем с кастомными эксклюзивными проектами, решая самые разнообразные сложные задачи. </p>
-				<p class="more">
-					<a href="#" class="button button-type-white button--rayen" data-text="Подробнее"><span>Подробнее</span></a>
-				</p>
-			</div>
-		</div>
-		<!-- =/content -->
-
-		<!-- =feed -->
-		<div class="feed">
-			<div class="feed_wrapper">
-				<!-- =here instagram widget -->
-				<div class="carousel owl-carousel" id="foo1">
-					<a href="#"><img src="../tmp/instpic-1.jpg" alt="" /></a>
-					<a href="#"><img src="../tmp/instpic-2.jpg" alt=""/></a>
-					<a href="#"><img src="../tmp/instpic-3.jpg" alt="" /></a>
-				</div>
-				<div class="carousel owl-carousel" id="foo2">
-					<a href="#"><img src="../tmp/instpic-2.jpg" alt="" /></a>
-					<a href="#"><img src="../tmp/instpic-3.jpg" alt="" /></a>
-				</div>
-				<div class="carousel owl-carousel" id="foo3">
-					<a href="#"><img src="../tmp/instpic-3.jpg" alt="" /></a>
-					<a href="#"><img src="../tmp/instpic-2.jpg" alt="" /></a>
-					<a href="#"><img src="../tmp/instpic-1.jpg" alt="" /></a>
-				</div>
-				<!-- =/here instagram widget -->
-			</div>
-			<p class="head">INSTAGRAM @ lions_kit</p>
-		</div>
-		<!-- =/feed -->
-	</div>
-		
-	<!-- InstanceEndEditable -->
+	<!-- TemplateBeginEditable name="EditRegion3" -->
+	<!-- TemplateEndEditable -->
 </div>
 
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/slick.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/slick.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
-<script src="js/engine.js"></script>
+<script src="../js/engine.js"></script>
 </body>
-<!-- InstanceEnd --></html>
+</html>
