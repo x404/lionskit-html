@@ -37,7 +37,7 @@
 <body>
 
 <!-- InstanceBeginEditable name="EditRegion5" -->
-<div class="outerwrapper contacts">
+<div class="outerwrapper contacts_page">
 <!-- InstanceEndEditable -->
 	<div class="interface">
 		<!-- =panel -->
@@ -136,10 +136,80 @@
 		<!-- =content -->
 		<div class="content">
 			<div class="content_wrapper">
-			
+				<h1>Контакты</h1>
+				<div class="address">
+					<div class="place">
+						<p>г. Красноярск, ул. Брянская, 60 </p>
+						<p class="remark">(второй уровень боксов, въезд со стороны РЭО ГИБДД)</p>
+					</div>
+
+					<div class="row">
+						<div class="left">
+							<a href="callto:73912934964">+7 (391) 2-934-964</a>
+							<a href="mailto:lionskit@mail.ru">lionskit@mail.ru</a>
+						</div>
+						<div class="right">
+
+						</div>
+					</div>
+
+					<div class="forums">
+						<p class="head">Мы на форумах</p>
+						<p><a href="http://rotarycars.ru" target="_blank">ROTARYCARS.RU</a></p>
+						<p><a href="http://s13club.ru" target="_blank">S13CLUB.RU</a></p>
+						<p><a href="http://Skyline" target="_blank">Skyline</a></p>
+					</div>
+
+					<div class="feedback">
+						<form action="#" method="post" class="feeback_form">
+							<fieldset>
+								<input type="text" name="name" id="name" value="" />
+								<input type="text" name="Телефон или E-mail" id="Телефон или E-mail" value="" />
+								<input type="text" name="name" id="name" value="" />
+
+
+							</fieldset>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- =/content -->
+
+		<!-- =map -->
+		<div class="map">
+			<div id="map"></div>
+<script>
+var map;
+function initMap() {
+var myLatlng = new google.maps.LatLng(56.020980,92.8622083);
+var mapOptions = {
+  zoom: 16,
+  center: myLatlng,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var styles = [
+  {
+    stylers: [
+      { saturation: -100 }
+    ]
+  }
+  ];
+	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	map.setOptions({styles: styles});
+
+  var image = '/images/lionskit.png';
+  var lionskit = new google.maps.Marker({
+    position: {lat: 56.020980, lng: 92.8625083},
+    map: map,
+    icon: image
+  });
+
+
+}
+</script>		
+		</div>
+		<!-- =/map -->
 	</div>		
 	<!-- InstanceEndEditable -->
 </div>
@@ -149,5 +219,7 @@
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
 <script src="js/engine.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbr6YM4VFH1Qxt_YNWH9zTmouLVxHShrE&callback=initMap"></script>
+
 </body>
 <!-- InstanceEnd --></html>
