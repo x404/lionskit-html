@@ -23,7 +23,7 @@ class inWidget {
 	public $toolbar = false;
 	public $preview = 'large';
 	public $imgWidth = 0;
-	public $cacheFile = 'cache/db.txt';
+	public $cacheFile = 'inwidget/cache/db.txt';
 	public $lang = array();
 	public $langName = '';
 	public $langPath = 'lang/';

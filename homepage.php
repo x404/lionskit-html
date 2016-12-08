@@ -153,20 +153,13 @@
 		<!-- =feed -->
 		<div class="feed">
 			<div class="feed_wrapper">
-				<div class="carousel owl-carousel" id="foo1">
-					<a href="#"><img src="tmp/instpic-1.jpg" alt="" /></a>
-					<a href="#"><img src="tmp/instpic-2.jpg" alt=""/></a>
-					<a href="#"><img src="tmp/instpic-3.jpg" alt="" /></a>
-				</div>
-				<div class="carousel owl-carousel" id="foo2">
-					<a href="#"><img src="tmp/instpic-2.jpg" alt="" /></a>
-					<a href="#"><img src="tmp/instpic-3.jpg" alt="" /></a>
-				</div>
-				<div class="carousel owl-carousel" id="foo3">
-					<a href="#"><img src="tmp/instpic-3.jpg" alt="" /></a>
-					<a href="#"><img src="tmp/instpic-2.jpg" alt="" /></a>
-					<a href="#"><img src="tmp/instpic-1.jpg" alt="" /></a>
-				</div>
+				<?php
+				require_once 'inwidget/inwidget.php';
+
+				$inWidget = new inWidget();
+				$inWidget->getData();
+				require_once 'inwidget/template.php';
+				?>
 			</div>
 			<p class="head">INSTAGRAM @ lions_kit</p>
 		</div>
@@ -174,9 +167,9 @@
 	</div>
 </div>
 
-<script src="js/owl.carousel.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/engine.js"></script>
 </body>
 </html>

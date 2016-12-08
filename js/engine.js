@@ -53,10 +53,12 @@ $(document).ready(function(){
 		$('body').removeClass('l-with-subnav2')
 	});
 
+	
+
 
 	$('#foo1').owlCarousel({
 		loop: true,
-		autoplay : false,
+		autoplay : true,
 		autoplayTimeout : 6000,
 		autoplayHoverPause : true,
 		animateOut: 'fadeOut',
@@ -70,7 +72,7 @@ $(document).ready(function(){
 	$('#foo2').owlCarousel({
 		loop: true,
 		autoplay : true,
-		autoplayTimeout : 6000,
+		autoplayTimeout : 8000,
 		autoplayHoverPause : true,
 		animateOut: 'fadeOut',
 		nav: true,
@@ -83,7 +85,7 @@ $(document).ready(function(){
 	$('#foo3').owlCarousel({
 		loop: true,
 		autoplay : true,
-		autoplayTimeout : 6000,
+		autoplayTimeout : 11000,
 		autoplayHoverPause : true,
 		animateOut: 'fadeOut',
 		nav: true,
