@@ -112,6 +112,29 @@ $(document).ready(function(){
 		lazyLoad: true
 	});
 
+
+	// inputs
+	$('#feedback_form .input-field').each(function(){
+		if ($(this).find('.form-control').val().length > 0) {
+			return $(this).addClass('is-charged');
+		}		
+	})
+
+	$('body').on('focusin', '.input-field', function(e) {
+		return $(this).addClass('is-focused');
+	})
+	.on('focusout', '.input-field', function(e) {
+		$(this).removeClass('is-focused');
+		return $(this).removeClass('is-focused');
+	})
+	.on('change', '.input-field', function() {
+		$(this).removeClass('is-charged');
+		if ($(this).find('.form-control').val().length > 0) {
+			return $(this).addClass('is-charged');
+		}
+	});
+	// #inputs
+
 })
 
 

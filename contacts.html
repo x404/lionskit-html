@@ -54,7 +54,7 @@
 						<li><a href="projects.html" title="" data-name="projects">Проекты</a></li>
 						<li><a href="articles.html" title="">Статьи</a></li>
 						<li><a href="reviews.html" title="" >Отзывы</a></li>
-						<li><a href="contacts.html" title="">Контакты</a></li>
+						<li class="active"><a href="contacts.html" title="">Контакты</a></li>
 					</ul>
 					<!-- InstanceEndEditable -->
 				</nav>
@@ -145,11 +145,17 @@
 
 					<div class="row">
 						<div class="left">
-							<a href="callto:73912934964">+7 (391) 2-934-964</a>
-							<a href="mailto:lionskit@mail.ru">lionskit@mail.ru</a>
+							<p>
+								<a href="callto:73912934964" class="tel" title="">+7 (391) 2-934-964</a>
+							</p>
+							<p>
+								<a href="mailto:lionskit@mail.ru" class="mail" title="">lionskit@mail.ru</a>
+							</p>
 						</div>
 						<div class="right">
-
+							<a href="#" title="vkontakte" class="icon icon-vk" target="_blank"></a>
+							<a href="#" title="instagram" class="icon icon-instagram" target="_blank"></a>
+							<a href="#" title="d" class="icon icon-d" target="_blank"></a>
 						</div>
 					</div>
 
@@ -160,17 +166,30 @@
 						<p><a href="http://Skyline" target="_blank">Skyline</a></p>
 					</div>
 
+					<!-- =feedback -->
 					<div class="feedback">
-						<form action="#" method="post" class="feeback_form">
+						<form action="#" method="post" id="feeback_form">
 							<fieldset>
-								<input type="text" name="name" id="name" value="" />
-								<input type="text" name="Телефон или E-mail" id="Телефон или E-mail" value="" />
-								<input type="text" name="name" id="name" value="" />
-
-
+								<div class="input-field">
+									<label for="name" class="name-field">Имя</label>
+									<label for="name" class="helper-field">Имя</label>
+									<input type="text" id="name" value="" class="form-control required" name="name" />
+								</div>
+								<div class="input-field">
+									<label for="tel" class="name-field">Телефон или E-mail</label>
+									<label for="tel" class="helper-field">Телефон или E-mail</label>
+									<input type="text" id="tel" value="" class="form-control required" name="tel" />
+								</div>
+								<div class="input-field textarea-field">
+									<label for="msg" class="name-field">Сообщение</label>
+									<label for="msg" class="helper-field">Сообщение</label>			
+									<textarea name="msg" id="msg" cols="30" rows="10" class="form-control required"></textarea>
+								</div>
+								<button type="button" class="submit button button-type-white button--rayen" data-text="Отправить"><span>Отправить</span></button>
 							</fieldset>
 						</form>
 					</div>
+					<!-- =/feedback -->
 				</div>
 			</div>
 		</div>
@@ -218,6 +237,7 @@ var styles = [
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
 <script src="js/engine.js"></script>
 <!-- InstanceBeginEditable name="EditRegion6" -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbr6YM4VFH1Qxt_YNWH9zTmouLVxHShrE&callback=initMap"></script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
