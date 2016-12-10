@@ -26,5 +26,6 @@ Lionskit
 После чего в строке
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbr6YM4VFH1Qxt_YNWH9zTmouLVxHShrE&callback=initMap"></script>
 изменить ключ key на сгенерированный в Console Google
+
 ---------------------------------------------------------
 
