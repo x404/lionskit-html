@@ -141,7 +141,7 @@
 						<h1>Статьи</h1>
 						<ul>
 							<li class="articles_item">
-								<a href="#" title="">
+								<a href="/tmp/ajax.html" title="" rel="load-entry">
 									<div class="articles_item_wrapper">
 										<p class="articles_item_title">Приглашение на 9ю международнаю выставку — Композит-Экспо 2016</p>
 										<div class="articles_item_text">композитные материалы, технологии производства композитов, оборудование, изделия из композиционных материалов</div>
@@ -149,7 +149,7 @@
 								</a>
 							</li>
 							<li class="articles_item">
-								<a href="#" title="">
+								<a href="/tmp/ajax2.html" title="" rel="load-entry">
 									<div class="articles_item_wrapper">
 										<p class="articles_item_title">Видео по изготовлению бампера</p>
 										<div class="articles_item_text">Текстовое описание видео</div>
@@ -157,7 +157,7 @@
 								</a>
 							</li>
 							<li class="articles_item">
-								<a href="#" title="">
+								<a href="/tmp/ajax2.html" title="" rel="load-entry">
 									<div class="articles_item_wrapper">
 										<p class="articles_item_title">Как повысить качество детали и сроки ее изготовления?</p>
 										<div class="articles_item_text">Чтобы повысить качество и сроки ее изготовления, нужно прочитать данную статью</div>
@@ -165,7 +165,7 @@
 								</a>
 							</li>
 							<li class="articles_item">
-								<a href="#" title="">
+								<a href="/tmp/ajax3.html" title="" rel="load-entry">
 									<div class="articles_item_wrapper">
 										<p class="articles_item_title">Приглашение на 9ю международнаю выставку — Композит-Экспо 2016</p>
 										<div class="articles_item_text">композитные материалы, технологии производства композитов, оборудование, изделия из композиционных материалов</div>
@@ -173,7 +173,7 @@
 								</a>
 							</li>
 							<li class="articles_item">
-								<a href="#" title="">
+								<a href="/tmp/ajax.html" title="" rel="load-entry">
 									<div class="articles_item_wrapper">
 										<p class="articles_item_title">Видео по изготовлению бампера</p>
 										<div class="articles_item_text">Текстовое описание видео</div>
@@ -181,7 +181,7 @@
 								</a>
 							</li>
 							<li class="articles_item">
-								<a href="#" title="">
+								<a href="/tmp/ajax.html" title="" rel="load-entry">
 									<div class="articles_item_wrapper">
 										<p class="articles_item_title">Как повысить качество детали и сроки ее изготовления?</p>
 										<div class="articles_item_text">Чтобы повысить качество и сроки ее изготовления, нужно прочитать данную статью</div>
@@ -196,8 +196,41 @@
 		<!-- =/content -->
 
 		<!-- =article -->
-		<main id="single">
-			
+		<main class="entry" id="entry-scroller">
+			<div class="entry_top">
+				<h1>Приглашение на 9ю международнаю выставку — Композит-Экспо 2016.</h1>
+				<p>Композит-Экспо 2016 — Девятая международная выставка: композитные материалы, технологии производства композитов, оборудование, изделия из композиционных материалов Даты проведения: 17 — 19 февраля, 2016 <br>
+				Место проведения: Россия, Москва, МВЦ "Крокус Экспо", павильон 1, залы 1 и 2 Организаторы: Выставочная Компания "Мир-Экспо", Союз производителей композитов Ежегодная выставка "Композит-Экспо" является единственной в России международной специализированной выставкой композитных материалов, технологий и оборудования, которая наглядно демонстрирует достижения в сфере развития материаловедения, и призвана способствовать экспонентам в налаживании новых деловых контактов и партнерских отношений.</p>
+			</div>
+
+			<br>
+
+			<div class="entry_content">
+				<div class="media_container">
+					<img src="tmp/article.jpg" alt="" />
+				</div>
+
+				<ul>
+					<li>Список 1</li>
+					<li>Список 2</li>
+					<li>Список 3</li>
+					<li>Список 4</li>
+				</ul>
+
+				<ol>
+					<li>Список 1</li>
+					<li>Список 2</li>
+					<li>Список 3</li>
+					<li>Список 4</li>
+				</ol>
+
+				<h2>Заголовок 2го уровня</h2>
+				<h3>Заголовок 3го уровня</h3>
+				<h4>Заголовок 4го уровня</h4>
+				<h5>Заголовок 5го уровня</h5>
+
+				<blockquote>Доброй ночи! В планах переделать ваз 2110, собираюсь поменять всю подвеску, выхлопную систему, тормозную, до коробки добраться и всё в этом роде. </blockquote>
+			</div>
 		</main>
 		<!-- =/article -->
 	</div>
@@ -213,16 +246,50 @@
 <link rel="stylesheet" property='stylesheet' href="css/jquery.mCustomScrollbar.css" />
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script>
-    (function($){
-        $(window).on('load',function(){
-        	h = $(window).height();
-        	$('#articles-scroller').height(h);
+	(function($){
+		$(window).on('load',function(){
+			var h = $(window).height();
+			// принудительно назначаем высоту скрол-областям
+			$('#articles-scroller').height(h);
+			$('#entry-scroller').height(h);
 
-            $('#articles-scroller').mCustomScrollbar({
+			$('#articles-scroller').mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
 
-            });
-        });
-    })(jQuery);
+			$('#entry-scroller').mCustomScrollbar({
+				scrollButtons : {enable:true},
+				autoDraggerLength : true
+			});
+
+			// меняетм высоту скрол-областям при ресайзе окна браузера
+			$(window).resize(function() {
+				var h = $(window).height();
+				$('#articles-scroller').height(h);
+				$('#entry-scroller').height(h);
+			});
+
+
+			// подгрузщка контента по ссылке
+			$('a[rel="load-entry"]').click(function(e){
+				e.preventDefault();
+				$('#articles-scroller .articles_item.current').removeClass('current');
+				$(this).closest('li').addClass('current');
+				var url=$(this).attr('href'),
+					$container = $('#entry-scroller .mCSB_container');
+				$.get(url,function(data){
+ 					$container.fadeOut('normal', function(){
+						$container.html(data); 
+					});
+				}).done(function(data) {
+					$container.fadeIn();
+				}).fail(function() {
+				    $container.html('<div class="entry_top"><h1>Статья не загружена</h1></div>');
+			  });
+			});
+		});
+	})(jQuery);
 </script>
 <!-- InstanceEndEditable -->
 </body>
