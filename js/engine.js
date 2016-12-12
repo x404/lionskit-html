@@ -137,7 +137,7 @@ $(document).ready(function(){
 
 
 	// clear forms
-	$('#feeback_form').find('.form-control').val('');
+	$('.form').find('.form-control').val('');
 	
 	// validate
 	$('#feeback_form .submit').click(function(e){

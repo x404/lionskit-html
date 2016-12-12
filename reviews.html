@@ -209,23 +209,54 @@
 <div class="modal fade" id="add-review" tabindex="-1" role="dialog" aria-labelledby="callbackLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-			<div class="modal-title" id="callbackLabel">Перезвоните мне</div>
-			<p>Оставьте свои контактные данные и наш менеджер <br> свяжется с вами в течение рабочего дня.</p>
-			<form action="#" method="post" id="add-review-form">
+			<div class="modal-title" id="callbackLabel">Оставить отзыв</div>
+			<form action="#" method="post" id="add-review-form" class="form">
 				<fieldset>
-					<div class="input-field">
-					<label for="name" class="name-field">Ваше имя</label>
-					<label for="name" class="helper-field helper-field-name">Ваше имя</label>					
-						<input type="text" id="name" name="name" class="form-control required" value="" />
+					<div class="row">
+						<div class="cell">
+							<div class="input-field">
+								<label for="name" class="name-field">Имя</label>
+								<label for="name" class="helper-field helper-field-name">Имя</label>					
+								<input type="text" id="name" name="name" class="form-control required" value="" />
+							</div>
+						</div>
+						<div class="cell">
+							<div class="input-field">
+								<label for="tel" class="name-field">Телефон</label>
+								<label for="tel" class="helper-field helper-field-tel">Телефон</label>
+								<input type="tel" id="tel" name="tel" class="form-control required" value="" />
+							</div>
+						</div>
 					</div>
-					<div class="input-field">
-					<label for="tel" class="name-field">Телефон</label>
-					<label for="tel" class="helper-field helper-field-tel">Телефон</label>
-						<input type="tel" id="tel" name="tel" class="form-control required" value="" />
+
+					<div class="row">
+						<div class="cell">
+							<div class="input-field">
+								<label for="city" class="name-field">Ваш город</label>
+								<label for="city" class="helper-field helper-field-city">Ваш город</label>					
+								<input type="text" id="city" name="city" class="form-control required" value="" />
+							</div>
+						</div>
+						<div class="cell">
+							<div class="input-field">
+								<label for="auto" class="name-field">Ваш автомобиль</label>
+								<label for="auto" class="helper-field helper-field-auto">Ваш автомобиль</label>
+								<input type="text" id="auto" name="auto" class="form-control required" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field textarea-field">
+							<label for="msg" class="name-field">Текст отзыва</label>
+							<label for="msg" class="helper-field helper-field-msg">Текст отзыва</label>
+							<textarea name="msg" id="msg" cols="30" rows="10" class="form-control required"></textarea>
+						</div>
 					</div>
 
 					<div class="bottom row">
-						<input type="submit" class="submit" value="Заказать звонок">						
+						<button type="button" class="submit button button-type-white button--rayen" data-text="Отправить" data-target="#add-review" data-toggle="modal"><span>Отправить</span></button>
+						<p class="msg">Ваш отзыв будет опубликован в ближайшее время</p>
 					</div>
 				</fieldset>
 			</form>
