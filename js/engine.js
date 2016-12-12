@@ -174,6 +174,25 @@ $(document).ready(function(){
 		}
 	});	
 
+
+var $slickElement = $('#reviews');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1,
+        	ii = '';
+        (i < 10) ? ii = '0' + i : ii = i;
+        $('#count_current').text(ii);
+        $('#count_all').text('/ ' + slick.slideCount);
+    });
+
+    $slickElement.slick({
+        dots: true,
+        fade: true,
+		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Предыдущий слайд" tabindex="0" role="button"></button>',
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Следующий слайд" tabindex="0" role="button"></button>',        
+    });	
+
 })
 
 
