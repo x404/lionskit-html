@@ -220,8 +220,7 @@ $(document).ready(function(){
 	});	
 
 
-var $slickElement = $('#reviews');
-
+	var $slickElement = $('#reviews');
 	$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
 		//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
 		var i = (currentSlide ? currentSlide : 0) + 1,
@@ -236,8 +235,7 @@ var $slickElement = $('#reviews');
 		fade: true,
 		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Предыдущий слайд" tabindex="0" role="button"></button>',
 		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Следующий слайд" tabindex="0" role="button"></button>',		
-	});	
-
+	});
 })
 
 
