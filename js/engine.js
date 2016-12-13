@@ -219,6 +219,24 @@ $(document).ready(function(){
 		}
 	});	
 
+	$('#add-order-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') {
+				$('#add-order-form .helper-field-name').text('Заполните поле');
+				$('#add-order-form .helper-field-name').addClass('error')
+			}
+
+			if (element.attr('name') == 'tel'){
+				$('#add-order-form .helper-field-tel').text('Заполните поле');
+				$('#add-order-form .helper-field-tel').addClass('error')
+			}
+		}
+	});		
+
 
 	var $slickElement = $('#reviews');
 	$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
