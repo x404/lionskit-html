@@ -259,19 +259,31 @@ $(document).ready(function(){
 
 	$('#gallery-scroller').mCustomScrollbar({
 		callbacks:{
-		    whileScrolling:function(){
-		        // myCustomFn(this);
-		        console.log(this.mcs.top);
-		    }
-		}		
+			whileScrolling:function(el){
+				$('#gallery-scroller img').each(function (){
+					id = '#' + $(this).attr('id');
+					if ($(id).offset().top < 1 ) {
+						$('.thumbs .current').removeClass('current');
+						$('.thumbs li a').filter(function( index ) {
+							return $(this).attr('href') === id;
+						}).addClass('current');
+					}
+				});
+
+				if (this.mcs.topPct > 97) {
+					$('.thumbs .current').removeClass('current');
+					$('.thumbs li:last-child a').addClass('current');
+				}
+			}
+		}
 	});	
 
 	$('.thumbs a[href^="#"]').click(function(e){
 		var $this = $(this),
 			href=$this.attr("href"),
 			target=$(href).parents(".mCustomScrollbar"); 
-			 $('.thumbs .current').removeClass('current');
-			 $this.addClass('current');
+			$('.thumbs .current').removeClass('current');
+			$this.addClass('current');
 
 		if(target.length){
 			 e.preventDefault();
