@@ -254,13 +254,31 @@ $(document).ready(function(){
 		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Предыдущий слайд" tabindex="0" role="button"></button>',
 		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Следующий слайд" tabindex="0" role="button"></button>',		
 	});
+
+	$('#card-scroller-desc').mCustomScrollbar();
+
+	$('#gallery-scroller').mCustomScrollbar({
+		callbacks:{
+		    whileScrolling:function(){
+		        // myCustomFn(this);
+		        console.log(this.mcs.top);
+		    }
+		}		
+	});	
+
+	$('.thumbs a[href^="#"]').click(function(e){
+		var $this = $(this),
+			href=$this.attr("href"),
+			target=$(href).parents(".mCustomScrollbar"); 
+			 $('.thumbs .current').removeClass('current');
+			 $this.addClass('current');
+
+		if(target.length){
+			 e.preventDefault();
+			 target.mCustomScrollbar("scrollTo",href);
+		}
+	});	
 })
-
-
-$('document').on('hover', '.subnav-lev1 .subnav_content', function(){
-	// console.log("~!")
-})
-
 
 
 

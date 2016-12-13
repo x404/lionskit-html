@@ -200,11 +200,25 @@
 
 		<!-- =gallery -->
 		<div class="gallery">
+			<ul class="thumbs">
+				<li><a href="#pic1" class="current"><img src="tmp/thumb-1.jpg" alt="" /></a></li>
+				<li><a href="#pic2"><img src="tmp/thumb-2.jpg" alt="" /></a></li>
+				<li><a href="#pic3"><img src="tmp/thumb-3.jpg" alt="" /></a></li>
+				<li><a href="#pic4"><img src="tmp/thumb-4.jpg" alt="" /></a></li>
+			</ul>
 			<div id="gallery-scroller">
-				<div><img src="tmp/card-1.jpg" alt=""></div>
-				<div><img src="tmp/card-2.jpg" alt=""></div>
-				<div><img src="tmp/card-1.jpg" alt=""></div>
-				<div><img src="tmp/card-2.jpg" alt=""></div>
+				<div>
+					<img src="tmp/card-1.jpg" alt="" id="pic1" />
+				</div>
+				<div>
+					<img src="tmp/card-2.jpg" alt="" id="pic2" />
+				</div>
+				<div>
+					<img src="tmp/card-1.jpg" alt="" id="pic3" />
+				</div>
+				<div>
+					<img src="tmp/card-2.jpg" alt="" id="pic4" />
+				</div>
 			</div>						
 		</div>
 		<!-- =/gallery -->
@@ -264,21 +278,12 @@
 			function equalheight(){
 				// принудительно назначаем высоту скрол-областям
 				var h = $(window).height();
-				$('#card-scroller-desc').height(h);
-				$('#gallery-scroller').height(h);
+				$('#card-scroller-desc, #gallery-scroller').height(h);
 			};
 
 			equalheight();
-			$('#card-scroller-desc').mCustomScrollbar();			
-			$('#gallery-scroller').mCustomScrollbar();
-
-			equalheight();
-
-			$(window).resize(function() {
-				equalheight();
-			});
 			
-			// меняетм высоту скрол-областям при ресайзе окна браузера
+			// меняем высоту скрол-областям при ресайзе окна браузера
 			$(window).resize(function() {
 				equalheight();
 			});
