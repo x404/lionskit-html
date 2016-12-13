@@ -161,21 +161,21 @@
 										<td></td>
 										<td class="naim">Передний бампер</td>
 										<td class="price">8 000 Р</td>
-										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#add-review" data-toggle="modal"><span>Купить</span></button></td>
+										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#order" data-toggle="modal"><span>Купить</span></button></td>
 										<td></td>
 									</tr>
 									<tr>
 										<td></td>
 										<td class="naim">Задний бампер</td>
 										<td class="price">8 000 Р</td>
-										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#add-review" data-toggle="modal"><span>Купить</span></button></td>
+										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#order" data-toggle="modal"><span>Купить</span></button></td>
 										<td></td>
 									</tr>
 									<tr>
 										<td></td>
 										<td class="naim">Пороги</td>
 										<td class="price">5 000 Р</td>
-										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#add-review" data-toggle="modal"><span>Купить</span></button></td>
+										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#order" data-toggle="modal"><span>Купить</span></button></td>
 										<td></td>
 									</tr>
 									<tr>
@@ -185,7 +185,7 @@
 											20 000 Р
 											<p class="profit">(экономия 2 000 Р)</p>
 										</td>
-										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#add-review" data-toggle="modal"><span>Купить</span></button></td>
+										<td align="right"><button type="button" class="buy-btn button button-type-white button--rayen" data-text="Купить" data-target="#order" data-toggle="modal"><span>Купить</span></button></td>
 										<td></td>
 									</tr>
 								</table>
@@ -208,8 +208,38 @@
 			</div>						
 		</div>
 		<!-- =/gallery -->
-
 	</div>
+
+<!-- =callback -->
+<div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="orderLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="orderLabel">Оформление заявки на покупку</div>
+			<form action="#" method="post" id="add-order-form" class="form">
+				<fieldset>
+					<div class="input-field">
+						<label for="name" class="name-field">Имя</label>
+						<label for="name" class="helper-field helper-field-name">Имя</label>					
+						<input type="text" id="name" name="name" class="form-control required" value="" />
+					</div>
+					<div class="input-field">
+						<label for="tel" class="name-field">Телефон</label>
+						<label for="tel" class="helper-field helper-field-tel">Телефон</label>
+						<input type="tel" id="tel" name="tel" class="form-control required tel" value="" />
+					</div>
+
+					<div class="bottom">
+						<button type="button" class="submit button button-type-white button--rayen" data-text="Отправить"><span>Отправить</span></button>
+						<p class="msg">С вами свяжется наш менеджер в ближайшее время</p>
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/callback -->
+
 	<!-- InstanceEndEditable -->
 </div>
 
@@ -248,17 +278,10 @@
 				equalheight();
 			});
 			
-			// function equalheight(){
-			// 	// принудительно назначаем высоту скрол-областям
-			// 	var h = parseInt($('body').height()/2);
-			// 	$('.list_goods .item').height(h);
-			// };
-
 			// меняетм высоту скрол-областям при ресайзе окна браузера
 			$(window).resize(function() {
 				equalheight();
 			});
-
 		});
 	})(jQuery);
 </script>
