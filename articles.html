@@ -50,7 +50,7 @@
 					<!-- InstanceBeginEditable name="EditRegion4" -->
 					<ul>
 						<li><a href="#" title="" data-name="about">О компании</a></li>
-						<li><a href="#" title="" data-name="catalog">Каталог</a></li>
+						<li><a href="catalog.html" title="" data-name="catalog">Каталог</a></li>
 						<li><a href="projects.html" title="" data-name="projects">Проекты</a></li>
 						<li class="active"><a href="articles.html" title="">Статьи</a></li>
 						<li><a href="reviews.html" title="" >Отзывы</a></li>
@@ -255,10 +255,14 @@
 <script>
 	(function($){
 		$(window).on('load',function(){
-			var h = $(window).height();
-			// принудительно назначаем высоту скрол-областям
-			$('#articles-scroller').height(h);
-			$('#entry-scroller').height(h);
+			function equalheight(){
+				// принудительно назначаем высоту скрол-областям
+				var h = $(window).height();
+				$('#articles-scroller').height(h);
+				$('#entry-scroller').height(h);
+			};
+
+			equalheight();
 
 			$('#articles-scroller').mCustomScrollbar({
 				scrollButtons : {enable:true},
@@ -272,9 +276,7 @@
 
 			// меняетм высоту скрол-областям при ресайзе окна браузера
 			$(window).resize(function() {
-				var h = $(window).height();
-				$('#articles-scroller').height(h);
-				$('#entry-scroller').height(h);
+				equalheight();
 			});
 
 			// подгрузщка контента по ссылке
