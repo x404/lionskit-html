@@ -255,6 +255,16 @@ $(document).ready(function(){
 		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Следующий слайд" tabindex="0" role="button"></button>',		
 	});
 
+	// scrollbars
+	$('#articles-scroller').mCustomScrollbar({
+		scrollButtons : {enable:true},
+		autoDraggerLength : true
+	});
+
+	$('#entry-scroller').mCustomScrollbar({
+		scrollButtons : {enable:true},
+		autoDraggerLength : true
+	});
 	$('#card-scroller-desc').mCustomScrollbar();
 
 	$('#gallery-scroller').mCustomScrollbar({
@@ -289,6 +299,24 @@ $(document).ready(function(){
 			 e.preventDefault();
 			 target.mCustomScrollbar("scrollTo",href);
 		}
+	});	
+
+	// подгрузщка контента по ссылке в статьях
+	$('a[rel="load-entry"]').click(function(e){
+		e.preventDefault();
+		$('#articles-scroller .articles_item.current').removeClass('current');
+		$(this).closest('li').addClass('current');
+		var url=$(this).attr('href'),
+			$container = $('#entry-scroller .mCSB_container');
+		$.get(url,function(data){
+				$container.fadeOut('normal', function(){
+				$container.html(data); 
+			});
+		}).done(function(data) {
+			$container.fadeIn();
+		}).fail(function() {
+		    $container.html('<div class="entry_top"><h1>Статья не загружена</h1></div>');
+	  });
 	});	
 })
 

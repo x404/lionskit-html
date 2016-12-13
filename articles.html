@@ -258,43 +258,14 @@
 			function equalheight(){
 				// принудительно назначаем высоту скрол-областям
 				var h = $(window).height();
-				$('#articles-scroller').height(h);
-				$('#entry-scroller').height(h);
+				$('#articles-scroller, #entry-scroller').height(h);
 			};
 
 			equalheight();
 
-			$('#articles-scroller').mCustomScrollbar({
-				scrollButtons : {enable:true},
-				autoDraggerLength : true
-			});
-
-			$('#entry-scroller').mCustomScrollbar({
-				scrollButtons : {enable:true},
-				autoDraggerLength : true
-			});
-
 			// меняетм высоту скрол-областям при ресайзе окна браузера
 			$(window).resize(function() {
 				equalheight();
-			});
-
-			// подгрузщка контента по ссылке
-			$('a[rel="load-entry"]').click(function(e){
-				e.preventDefault();
-				$('#articles-scroller .articles_item.current').removeClass('current');
-				$(this).closest('li').addClass('current');
-				var url=$(this).attr('href'),
-					$container = $('#entry-scroller .mCSB_container');
-				$.get(url,function(data){
- 					$container.fadeOut('normal', function(){
-						$container.html(data); 
-					});
-				}).done(function(data) {
-					$container.fadeIn();
-				}).fail(function() {
-				    $container.html('<div class="entry_top"><h1>Статья не загружена</h1></div>');
-			  });
 			});
 		});
 	})(jQuery);
