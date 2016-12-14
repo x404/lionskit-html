@@ -355,10 +355,48 @@ $(document).ready(function(){
 			};
 		init();
 	});	
+});
 
+// показываем второй  уровень меню
+$(document).on('click', '.o-menu .panel .folder a', function(e){
+	e.preventDefault();
+	$('.panel').addClass('hide');
+	$('.subnav-lev1').addClass('show');
+
+
+	var $this = $(this),
+		menuItem = $this.data('name'),
+		w = $(document).width();
+
+	if (typeof menuItem !== 'undefined' && w > 768){
+		$('body').addClass('l-with-subnav1');
+	} else {
+		$('body').removeClass('l-with-subnav1');
+	};
+
+	// $current.removeClass('current');
+	// $parent.addClass('current');
+
+	$('.subnav-lev1 .subnav_content-mobileactive').removeClass('subnav_content-mobileactive');
+	$('.subnav-lev1 .subnav_content-' + menuItem).addClass('subnav_content-mobileactive');
+
+
+});
+
+// возврат из второго уровня в первое
+$(document).on('click', '.o-menu .subnav-lev1 .back_btn', function(e){
+	e.preventDefault();
+	$('.subnav-lev1').removeClass('show');
+	$('.panel').removeClass('hide');
+});
+
+
+$(document).on('click', '.o-menu .subnav-lev1 .close', function(e){
+	e.preventDefault();
+	$('.o-menu .subnav-lev1').removeClass('show');
+	$('body').removeClass('o-menu');
+	$('.panel').removeClass('hide');
 })
-
-
 
 /*
  * Translated default messages for the jQuery validation plugin.
