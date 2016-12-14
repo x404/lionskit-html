@@ -1,13 +1,13 @@
 $(document).ready(function(){
-
 	$('.panel nav li a').hover(
 		function(){
 			var $this = $(this),
 				$parent = $this.parent(),
 				$current = $this.closest('ul').find('.current');
-				menuItem = $this.data('name');
+				menuItem = $this.data('name'),
+				w = $(document).width();
 
-			if (typeof menuItem !== 'undefined'){
+			if (typeof menuItem !== 'undefined' && w > 768){
 				$('body').addClass('l-with-subnav1');
 			} else {
 				$('body').removeClass('l-with-subnav1');
@@ -324,6 +324,38 @@ $(document).ready(function(){
 		    $container.html('<div class="entry_top"><h1>Статья не загружена</h1></div>');
 	  });
 	});	
+
+
+	// mobile
+	// $('.panel .close').click(function(){
+	// 	e.preventDefault();
+	// 	$('.panel').toggleClass('showmenu')
+	// })
+
+	// mobile-menu
+	$('.panel').each(function(){
+		var $this = $(this),
+			$link = $('.navbar-toggle'),
+			$close = $this.find('.close'),
+
+			init = function(){
+				$link.on('click', openMenu);
+				$close.on('click', closeMenu);
+			},
+			openMenu = function(e){
+				e.preventDefault();
+				h = $(document).height()-50;
+				$('body').addClass('o-menu');
+				// $('.mobile-menu').height(h);
+
+			},
+			closeMenu = function(e){
+				e.preventDefault();
+				$('body').removeClass('o-menu');
+			};
+		init();
+	});	
+
 })
 
 
