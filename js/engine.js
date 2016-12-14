@@ -374,13 +374,8 @@ $(document).on('click', '.o-menu .panel .folder a', function(e){
 		$('body').removeClass('l-with-subnav1');
 	};
 
-	// $current.removeClass('current');
-	// $parent.addClass('current');
-
 	$('.subnav-lev1 .subnav_content-mobileactive').removeClass('subnav_content-mobileactive');
 	$('.subnav-lev1 .subnav_content-' + menuItem).addClass('subnav_content-mobileactive');
-
-
 });
 
 // возврат из второго уровня в первое
@@ -390,13 +385,58 @@ $(document).on('click', '.o-menu .subnav-lev1 .back_btn', function(e){
 	$('.panel').removeClass('hide');
 });
 
-
+// кнопка закрыть во втором уровне меню
 $(document).on('click', '.o-menu .subnav-lev1 .close', function(e){
 	e.preventDefault();
 	$('.o-menu .subnav-lev1').removeClass('show');
 	$('body').removeClass('o-menu');
 	$('.panel').removeClass('hide');
-})
+});
+
+
+
+
+// показываем третий  уровень меню
+$(document).on('click', '.o-menu .subnav-lev1 .folder a', function(e){
+	e.preventDefault();
+	$('.subnav-lev1').removeClass('show').addClass('hide');
+	$('.subnav-lev2').addClass('show');
+
+	var $this = $(this),
+		menuItem = $this.data('name'),
+		w = $(document).width();
+
+	if (typeof menuItem !== 'undefined' && w > 768){
+		$('body').addClass('l-with-subnav2');
+	} else {
+		$('body').removeClass('l-with-subnav2');
+	};
+
+	$('.subnav-lev2 .subnav_content-mobileactive').removeClass('subnav_content-mobileactive');
+	$('.subnav-lev2 .subnav_content-' + menuItem).addClass('subnav_content-mobileactive');
+});
+
+// возврат из третьего уровня в первое
+$(document).on('click', '.o-menu .subnav-lev2 .back_btn', function(e){
+	e.preventDefault();
+	$('.o-menu .subnav-lev2').removeClass('show');
+	$('.o-menu .subnav-lev1').addClass('show');
+});
+
+// кнопка закрыть в третьем уровне меню
+$(document).on('click', '.o-menu .subnav-lev2 .close', function(e){
+	e.preventDefault();
+	// скрываем третий уровень меню
+	$('.o-menu .subnav-lev2').removeClass('show');
+	// скрываем второй уровень меню
+	$('.o-menu .subnav-lev1').removeClass('hide');
+	// скрываем первый уровень меню
+	$('.panel').removeClass('hide');
+	$('body').removeClass('o-menu');
+});
+
+
+
 
 /*
  * Translated default messages for the jQuery validation plugin.
