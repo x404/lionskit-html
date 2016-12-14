@@ -50,7 +50,7 @@
 					<!-- InstanceBeginEditable name="EditRegion4" -->
 					<ul>
 						<li><a href="#" title="" data-name="about">О компании</a></li>
-						<li class="active"><a href="#" title="" data-name="catalog">Каталог</a></li>
+						<li class="active"><a href="catalog.html" title="" data-name="catalog">Каталог</a></li>
 						<li><a href="projects.html" title="" data-name="projects">Проекты</a></li>
 						<li><a href="articles.html" title="">Статьи</a></li>
 						<li><a href="reviews.html" title="" >Отзывы</a></li>
@@ -231,6 +231,91 @@
 							</a>
 						</div>
 
+						<div class="item grid-item">
+							<a href="#">
+								<figure>
+									<img src="tmp/good-1.jpg" alt="Toyota Mark II 90" />
+									<img src="tmp/good-1-inv.jpg" alt="Toyota Mark II 90" class="overlay-img" />
+								</figure>
+								<div class="item_description">
+									<div class="item_model">Toyota Mark II 90</div>
+									<div class="item_title">BN Sport</div>
+									<div class="item_price">22 000 Р</div>
+									<p class="asterisk">* Комплект</p>
+								</div>
+							</a>
+						</div>
+						<div class="item grid-item">
+							<a href="#">
+								<figure>
+									<img src="tmp/good-2.jpg" alt="Toyota Mark II 90" />
+									<img src="tmp/good-2-inv.jpg" alt="Toyota Mark II 90" class="overlay-img" />
+								</figure>
+								<div class="item_description">
+									<div class="item_model">Toyota Mark II 90</div>
+									<div class="item_title">Final Konnexion</div>
+									<div class="item_price">20 000 Р</div>
+									<p class="asterisk">* Комплект</p>
+								</div>
+							</a>
+						</div>
+						<div class="item grid-item">
+							<a href="#">
+								<figure>
+									<img src="tmp/good-6.jpg" alt="Toyota Mark II 90" />
+									<img src="tmp/good-6-inv.jpg" alt="Toyota Mark II 90" class="overlay-img" />
+								</figure>
+								<div class="item_description">
+									<div class="item_model">Toyota Mark II 90</div>
+									<div class="item_title">Boomex</div>
+									<div class="item_price">8 000 Р</div>
+									<p class="asterisk">* Передний бампер</p>
+								</div>
+							</a>
+						</div>
+
+						<div class="item grid-item">
+							<a href="#">
+								<figure>
+									<img src="tmp/good-3.jpg" alt="Admiration+Yanack" />
+									<img src="tmp/good-3-inv.jpg" alt="Admiration+Yanack" class="overlay-img" />
+								</figure>
+								<div class="item_description">
+									<div class="item_model">Toyota Mark II 90</div>
+									<div class="item_title">Admiration+Yanack</div>
+									<div class="item_price">22 000 Р</div>
+									<p class="asterisk">* Комплект</p>
+								</div>
+							</a>
+						</div>
+						<div class="item grid-item">
+							<a href="#">
+								<figure>
+									<img src="tmp/good-4.jpg" alt="Tourer" />
+									<img src="tmp/good-4-inv.jpg" alt="Tourer" class="overlay-img" />
+								</figure>
+								<div class="item_description">
+									<div class="item_model">Tourer</div>
+									<div class="item_title">Final Konnexion</div>
+									<div class="item_price">8 000 Р</div>
+									<p class="asterisk">* Комплект</p>
+								</div>
+							</a>
+						</div>
+						<div class="item grid-item">
+							<a href="#">
+								<figure>
+									<img src="tmp/good-5.jpg" alt="Задний бампер Traum" />
+									<img src="tmp/good-5-inv.jpg" alt="Задний бампер Traum" class="overlay-img" />
+								</figure>
+								<div class="item_description">
+									<div class="item_model">Задний бампер Traum</div>
+									<div class="item_title">Boomex</div>
+									<div class="item_price">8 000 Р</div>
+									<p class="asterisk">* Комплект</p>
+								</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -267,18 +352,18 @@
 			
 			function equalheight(){
 				// принудительно назначаем высоту скрол-областям
-				var h = parseInt($('body').height()/2);
-				$('.list_goods .item').height(h);
+				var h = parseInt($('body').height());
+				$('#goods-scroller').height(h);
 			};
 
 
 			function animBg() {
-			$('.list_goods figure img').animate({
-				'left': '50%'
-				}, 8000)
+			$('.list_goods figure img2').animate({
+			  'left': '50%'
+			  }, 8000)
 			.animate({
-				'left': '-40%'
-				}, 8000,animBg);
+			  'left': '-40%'
+			  }, 8000,animBg);
 			}
 		});
 	})(jQuery);

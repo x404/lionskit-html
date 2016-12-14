@@ -261,6 +261,12 @@ $(document).ready(function(){
 		autoDraggerLength : true
 	});
 
+	$('#goods-scroller').mCustomScrollbar({
+		scrollButtons : {enable:true},
+		autoDraggerLength : true
+	});	
+	
+
 	$('#entry-scroller').mCustomScrollbar({
 		scrollButtons : {enable:true},
 		autoDraggerLength : true
