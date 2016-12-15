@@ -252,7 +252,8 @@ $(document).ready(function(){
 		dots: true,
 		fade: true,
 		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Предыдущий слайд" tabindex="0" role="button"></button>',
-		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Следующий слайд" tabindex="0" role="button"></button>',		
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Следующий слайд" tabindex="0" role="button"></button>',
+		appendArrows : $('.prevnext')
 	});
 
 	// scrollbars

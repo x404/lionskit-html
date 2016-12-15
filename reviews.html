@@ -240,8 +240,12 @@
 			<div class="count">
 				<span id="count_current"></span> <span id="count_all"></span>
 			</div>
-			<div class="add-review">
-				<button type="button" class="add-review-btn button button-type-white button--rayen" data-text="Оставить отзыв" data-target="#add-review" data-toggle="modal"><span>Оставить отзыв</span></button>
+
+			<div class="reviews_bottom">
+				<div class="prevnext"></div>
+				<div class="add-review">
+					<button type="button" class="add-review-btn button button-type-white button--rayen" data-text="Оставить отзыв" data-target="#add-review" data-toggle="modal"><span>Оставить отзыв</span></button>
+				</div>
 			</div>
 		</div>
 		<!-- =/content -->
@@ -330,9 +334,21 @@
 <script>
 	(function($){
 		$(window).on('load',function(){
-			var h = $(window).height();
-			// принудительно назначаем высоту всей области
-			$('.reviews_wrapper').height(h);
+			function equalheight(){
+				// принудительно назначаем высоту скрол-областям
+				var h = $(window).height(),
+					w = $(window).width();
+				if (w <= 991) h = '';
+				$('.reviews_wrapper').height(h);
+			};
+
+			equalheight();
+
+			// меняетм высоту скрол-областям при ресайзе окна браузера
+			$(window).resize(function() {
+				equalheight();
+			});
+			
 		});
 	})(jQuery);
 </script>
