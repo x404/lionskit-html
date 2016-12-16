@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ru">
+<html lang="ru"><!-- InstanceBegin template="/Templates/homepage.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -10,10 +10,10 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
 <meta name="robots" content="noindex,nofollow" />
-
+<!-- InstanceBeginEditable name="doctitle" -->
 <title>Главная</title>
+<!-- InstanceEndEditable -->
 <link rel="stylesheet" href="css/owl.carousel.css" />
-<link rel="stylesheet" href="css/animate.css" />
 <link rel="stylesheet" href="css/slick.css" />
 <link rel="stylesheet" href="css/styles.css" />
 
@@ -24,17 +24,22 @@
 	<link href="css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
+<!--[if !IE]><!-->
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
+<!--<![endif]-->
+
 <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!--[if (gte IE 5.5)&(lte IE 8)]>
-	<script type="text/javascript" src="js/selectivizr.js"></script>
-<![endif]-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
 </head>
 <body>
 
+<!-- InstanceBeginEditable name="EditRegion5" -->
 <div class="outerwrapper home">
+<!-- InstanceEndEditable -->
 	<div class="interface">
 		<!-- =panel -->
 		<div class="panel">
@@ -43,26 +48,16 @@
 					<a href="/" title=""><img src="images/logo.png" alt=""></a>
 				</div>
 				<nav>
+					<!-- InstanceBeginEditable name="EditRegion4" -->
 					<ul>
-						<li>
-							<a href="#" title="" data-name="about">О компании</a>
-						</li>
-						<li>
-							<a href="#" title="" data-name="catalog">Каталог</a>
-						</li>
-						<li>
-							<a href="#" title="" data-name="projects">Проекты</a>
-						</li>
-						<li>
-							<a href="#" title="" data-name2="articles">Статьи</a>
-						</li>
-						<li>
-							<a href="#" title="" data-name2="reviews">Отзывы</a>
-						</li>
-						<li>
-							<a href="#" title="" data-name2="contacts">Контакты</a>
-						</li>
+						<li><a href="#" title="" data-name="about">О компании</a></li>
+						<li class="folder"><a href="catalog.html" title="" data-name="catalog">Каталог</a></li>
+						<li class="folder"><a href="projects.html" title="" data-name="projects">Проекты</a></li>
+						<li><a href="articles.html" title="">Статьи</a></li>
+						<li><a href="reviews.html" title="" >Отзывы</a></li>
+						<li><a href="contacts.html" title="">Контакты</a></li>
 					</ul>
+					<!-- InstanceEndEditable -->
 				</nav>
 			</div>
 			<div class="contacts_social">
@@ -98,12 +93,12 @@
 				<div class="title">Каталог обвесов</div>
 				<ul>
 					<li><a href="#" title="" data-name="honda">Honda</a></li>
-					<li><a href="#" title="" data-name2="infinity">Infinity</a></li>
-					<li><a href="#" title="" data-name2="lexus">Lexus</a></li>
-					<li><a href="#" title="" data-name2="mazda">Mazda</a></li>
-					<li><a href="#" title="" data-name2="mitsubishi">Mitsubishi</a></li>
-					<li><a href="#" title="" data-name2="nissan">Nissan</a></li>
-					<li><a href="#" title="" data-name2="subaru">Subaru</a></li>
+					<li><a href="#" title="">Infinity</a></li>
+					<li><a href="#" title="">Lexus</a></li>
+					<li><a href="#" title="">Mazda</a></li>
+					<li><a href="#" title="">Mitsubishi</a></li>
+					<li><a href="#" title="" >Nissan</a></li>
+					<li><a href="#" title="">Subaru</a></li>
 				</ul>
 			</div>
 
@@ -136,7 +131,9 @@
 		</div>
 		<!-- =/subnav2 -->
 	</div>
-
+	
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+	
 	<figure class="home_bg">
 		<div class="carousel" id="home_bg_slider">
 			<div class="carousel_item" style="background-image: url('/images/bg-1.jpg')"></div>
@@ -148,7 +145,7 @@
 		<!-- =content -->
 		<div class="content">
 			<div class="content_wrapper">
-				<p class="above">ТЮННИНГ</p>
+				<p class="prehead">ТЮННИНГ</p>
 				<h1>Изготовление обвесов</h1>
 				<p>LION'S KIT - это молодой красноярский бренд, занимающийся производством, установкой и ремонтом кузовных и других деталей из стеклопластика. Также мы работаем с кастомными эксклюзивными проектами, решая самые разнообразные сложные задачи. </p>
 				<p class="more">
@@ -161,6 +158,7 @@
 		<!-- =feed -->
 		<div class="feed">
 			<div class="feed_wrapper">
+			<!-- =here instagram widget -->
 				<?php
 				require_once 'inwidget/inwidget.php';
 
@@ -168,17 +166,33 @@
 				$inWidget->getData();
 				require_once 'inwidget/template.php';
 				?>
+			<!-- =/here instagram widget -->
 			</div>
 			<p class="head">INSTAGRAM @ lions_kit</p>
 		</div>
 		<!-- =/feed -->
 	</div>
+		
+	<!-- InstanceEndEditable -->
 </div>
+<div id="outdated"></div>
 
-<!-- <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script> -->
-<!-- <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script> -->
+<script src="outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
+<script src="js/modal.js"></script>
+
+<script src="js/inputmask/inputmask.js"></script>
+<script src="js/inputmask/inputmask.phone.extensions.js"></script>
+<script src="js/inputmask/jquery.inputmask.js"></script>
+
+<link rel="stylesheet" property='stylesheet' href="css/jquery.mCustomScrollbar.css" />
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
 <script src="js/engine.js"></script>
+<!-- InstanceBeginEditable name="EditRegion6" -->
+<!-- InstanceEndEditable -->
 </body>
-</html>
+<!-- InstanceEnd --></html>
