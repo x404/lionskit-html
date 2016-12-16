@@ -177,6 +177,7 @@
 </div>
 <div id="outdated"></div>
 
+<link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
 <script src="outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/slick.min.js"></script>
@@ -188,7 +189,7 @@
 <script src="js/inputmask/inputmask.phone.extensions.js"></script>
 <script src="js/inputmask/jquery.inputmask.js"></script>
 
-<link rel="stylesheet" property='stylesheet' href="css/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" property="stylesheet" href="css/jquery.mCustomScrollbar.css" />
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <script src="js/engine.js"></script>
