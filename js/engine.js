@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.panel nav li a').hover(
+	$('.panel nav li a, .panel nav li span').hover(
 		function(){
 			var $this = $(this),
 				$parent = $this.parent(),
@@ -11,7 +11,7 @@ $(document).ready(function(){
 				$('body').addClass('l-with-subnav1');
 			} else {
 				$('body').removeClass('l-with-subnav1');
-			};			
+			};
 
 			$current.removeClass('current');
 			$parent.addClass('current');
@@ -24,7 +24,7 @@ $(document).ready(function(){
 	});
 
 
-	$('.subnav-lev1 .subnav_content ul li a').mouseenter(function(){
+	$('.subnav-lev1 .subnav_content ul li').find('a, span').mouseenter(function(){
 			var $this = $(this),
 				$parent = $this.parent(),
 				$currents = $this.closest('ul').find('.current');
@@ -63,17 +63,6 @@ $(document).ready(function(){
 		fade: true,
 		cssEase: 'linear'
 	})
-
-	// $('#home_bg_slider').owlCarousel({
-	// 	loop: true,
-	// 	autoplay : false,
-	// 	autoplayTimeout : 5000,
-	// 	animateOut: 'fadeOut',
-	// 	nav: false,
-	// 	dots: false,
-	// 	items:1,
-	// 	lazyLoad: true
-	// });
 
 
 	$('#foo1').owlCarousel({
@@ -329,10 +318,10 @@ $(document).ready(function(){
 			$container.fadeIn('normal', function(){
 			});
 		}).fail(function() {
-		    $container.html('<p class="back"><button type="button" class="back_btn">Назад</button></p><div class="entry_top"><h1>Статья не загружена</h1></div>');
-	  });
-		$('body,html').animate({scrollTop: 0}, 1);    		
-	});	
+			$container.html('<p class="back"><button type="button" class="back_btn">Назад</button></p><div class="entry_top"><h1>Статья не загружена</h1></div>');
+		});
+		$('body,html').animate({scrollTop: 0}, 1);
+	});
 
 
 	// mobile
@@ -374,7 +363,7 @@ $(document).on('click', '.o-entry .back_btn', function(e){
 
 
 // показываем второй  уровень меню
-$(document).on('click', '.o-menu .panel .folder a', function(e){
+$(document).on('click', '.o-menu .panel .folder a, .o-menu .panel .folder span', function(e){
 	e.preventDefault();
 	$('.panel').addClass('hide');
 	$('.subnav-lev1').addClass('show');
@@ -413,7 +402,7 @@ $(document).on('click', '.o-menu .subnav-lev1 .close', function(e){
 
 
 // показываем третий  уровень меню
-$(document).on('click', '.o-menu .subnav-lev1 .folder a', function(e){
+$(document).on('click', '.o-menu .subnav-lev1 .folder a, .o-menu .subnav-lev1 .folder span', function(e){
 	e.preventDefault();
 	$('.subnav-lev1').removeClass('show').addClass('hide');
 	$('.subnav-lev2').addClass('show');
@@ -455,26 +444,26 @@ $(document).on('click', '.o-menu .subnav-lev2 .close', function(e){
 // =заглушка для IE
 //event listener: DOM ready
 function addLoadEvent(func) {
-    var oldonload = window.onload;
-    if (typeof window.onload != 'function') {
-        window.onload = func;
-    } else {
-        window.onload = function() {
-            if (oldonload) {
-                oldonload();
-            }
-            func();
-        }
-    }
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
 }
 //call plugin function after DOM ready
 addLoadEvent(function(){
-    outdatedBrowser({
-        bgColor: '#f25648',
-        color: '#ffffff',
-        lowerThan: 'transform',
-        languagePath: '/outdatedbrowser/lang/ru.html'
-    })
+	outdatedBrowser({
+		bgColor: '#f25648',
+		color: '#ffffff',
+		lowerThan: 'transform',
+		languagePath: '/outdatedbrowser/lang/ru.html'
+	})
 });
 // =/заглушка для IE
 
