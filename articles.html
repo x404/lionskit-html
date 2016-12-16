@@ -300,7 +300,10 @@
 		$(window).on('load',function(){
 			function equalheight(){
 				// принудительно назначаем высоту скрол-областям
-				var h = $(window).height();
+				var h = $(window).height(),
+					w = $(window).width();
+
+					if (w <=991) h = '';
 				$('#articles-scroller, #entry-scroller').height(h);
 			};
 

@@ -311,18 +311,24 @@ $(document).ready(function(){
 	// подгрузщка контента по ссылке в статьях
 	$('a[rel="load-entry"]').click(function(e){
 		e.preventDefault();
+		var w = $(window).width();
 		$('#articles-scroller .articles_item.current').removeClass('current');
 		$(this).closest('li').addClass('current');
 		var url=$(this).attr('href'),
 			$container = $('#entry-scroller .mCSB_container');
+			if (w < 991){
+				$container.closest('.main').addClass('o-entry');
+				$(window).scrollTop();
+			}
+			$container.html('');
 		$.get(url,function(data){
 				$container.fadeOut('normal', function(){
-				$container.html(data); 
+				$container.html('<p class="back"><button type="button" class="back_btn">Назад</button></p>' + data); 
 			});
 		}).done(function(data) {
 			$container.fadeIn();
 		}).fail(function() {
-		    $container.html('<div class="entry_top"><h1>Статья не загружена</h1></div>');
+		    $container.html('<p class="back"><button type="button" class="back_btn">Назад</button></p><div class="entry_top"><h1>Статья не загружена</h1></div>');
 	  });
 	});	
 
@@ -357,6 +363,13 @@ $(document).ready(function(){
 		init();
 	});	
 });
+
+$(document).on('click', '.o-entry .back_btn', function(e){
+	e.preventDefault();
+	$('.o-entry').removeClass('o-entry');
+});
+
+
 
 // показываем второй  уровень меню
 $(document).on('click', '.o-menu .panel .folder a', function(e){
