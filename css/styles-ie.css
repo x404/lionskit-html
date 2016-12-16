@@ -1,3 +1,42 @@
 textarea{overflow:hidden}       
-@media \0screen{
+
+
+:root .main{
+	height: 980px\9;
+}
+
+
+:root .articles_page .main{
+	display: block\9;
+}
+
+:root .articles_page .content,
+:root .articles_page .entry{
+	float: left\9;
+}
+
+
+:root .reviews_page .reviews_wrapper{
+	display: block\9;
+}
+
+:root .reviews_page .reviews_wrapper .left{
+	float: left\9;
+	margin-right: 0\9;
+	padding-left: 0\9;
+	width: 60%\9;
+}
+:root .reviews_page .reviews_wrapper .left .reviews_title,
+:root .reviews_page .reviews_wrapper .left .reviews_text,
+:root .reviews_page .reviews_wrapper .left .reviews_meta{
+	padding-left: 250px\9;
+}
+
+:root .reviews_page .reviews_wrapper .right{
+	float: left\9;
+	width: 40%\9;	
+}
+
+:root .contacts_page .main .content{
+	min-height: 100vh\9;
 }
