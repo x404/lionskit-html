@@ -297,14 +297,14 @@ $(document).ready(function(){
 
 	$('.thumbs a[href^="#"]').click(function(e){
 		var $this = $(this),
-			href=$this.attr("href"),
-			target=$(href).parents(".mCustomScrollbar"); 
+			href=$this.attr('href'),
+			target=$(href).parents('.mCustomScrollbar'); 
 			$('.thumbs .current').removeClass('current');
 			$this.addClass('current');
 
 		if(target.length){
-			 e.preventDefault();
-			 target.mCustomScrollbar("scrollTo",href);
+			e.preventDefault();
+			target.mCustomScrollbar('scrollTo',href);
 		}
 	});	
 
@@ -314,11 +314,11 @@ $(document).ready(function(){
 		var w = $(window).width();
 		$('#articles-scroller .articles_item.current').removeClass('current');
 		$(this).closest('li').addClass('current');
+		// $('#entry-scroller').mCustomScrollbar('scrollTo', 'top');
 		var url=$(this).attr('href'),
 			$container = $('#entry-scroller .mCSB_container');
 			if (w < 991){
 				$container.closest('.main').addClass('o-entry');
-				$(window).scrollTop();
 			}
 			$container.html('');
 		$.get(url,function(data){
@@ -326,10 +326,12 @@ $(document).ready(function(){
 				$container.html('<p class="back"><button type="button" class="back_btn">Назад</button></p>' + data); 
 			});
 		}).done(function(data) {
-			$container.fadeIn();
+			$container.fadeIn('normal', function(){
+			});
 		}).fail(function() {
 		    $container.html('<p class="back"><button type="button" class="back_btn">Назад</button></p><div class="entry_top"><h1>Статья не загружена</h1></div>');
 	  });
+		$('body,html').animate({scrollTop: 0}, 1);    		
 	});	
 
 
