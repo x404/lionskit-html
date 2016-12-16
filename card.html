@@ -24,13 +24,14 @@
 	<link href="css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
+<!--[if !IE]><!-->
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
+<!--<![endif]-->
+
 <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!--[if (gte IE 5.5)&(lte IE 8)]>
-	<script type="text/javascript" src="js/selectivizr.js"></script>
-<![endif]-->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
@@ -74,39 +75,11 @@
 					<a href="#" class="icon icon-instagram"></a>
 				</div>
 			</div>
-			<button class="close" type="button"></button>
 		</div>
 		<!-- =/panel -->
 
-		<!-- =panel-mobile -->
-		<div class="panel-mobile">
-			<div class="logo">
-				<a href="/">
-					<img src="images/logo-mob-1.png" alt="" />
-					<img src="images/logo-mob-2.png" alt="" class="logo-2" />
-				</a>
-			</div>
-			<div class="right">
-				<div class="contacts">
-					<a href="callto:+73912934964" class="tel">+7 (391) 2-934-964</a>
-				</div>
-				<div class="social">
-					<a href="#" class="icon icon-vk"></a>
-					<a href="#" class="icon icon-instagram"></a>
-				</div>
-				<button type="button" class="navbar-toggle">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-		</div>
-		<!-- =/panel-mobile -->
-
 		<!-- =subnav -->
 		<div class="subnav subnav-lev1">
-			<div class="back"><a href="#" class="back_btn">Назад</a></div>
-
 			<div class="subnav_content subnav_content-about">
 				<div class="title">О компании</div>
 				<ul>
@@ -119,8 +92,8 @@
 			<div class="subnav_content subnav_content-catalog">
 				<div class="title">Каталог обвесов</div>
 				<ul>
-					<li class="folder"><a href="#" title="" data-name="honda">Honda</a></li>
-					<li class="folder"><a href="#" title="" data-name="infinity">Infinity</a></li>
+					<li><a href="#" title="" data-name="honda">Honda</a></li>
+					<li><a href="#" title="">Infinity</a></li>
 					<li><a href="#" title="">Lexus</a></li>
 					<li><a href="#" title="">Mazda</a></li>
 					<li><a href="#" title="">Mitsubishi</a></li>
@@ -140,15 +113,12 @@
 					<li><a href="#" title="">Проект 6</a></li>
 					<li><a href="#" title="">Проект 7</a></li>
 				</ul>
-			</div>
-			<button class="close" type="button"></button>
+			</div>	
 		</div>
 		<!-- =/subnav -->
 
 		<!-- =subnav2 -->
 		<div class="subnav subnav-lev2">
-			<div class="back"><a href="#" class="back_btn">Назад</a></div>
-
 			<div class="subnav_content subnav_content-honda">
 				<div class="title">Honda</div>
 				<ul>
@@ -158,18 +128,6 @@
 					<li><a href="#">Обвес 4</a></li>
 				</ul>
 			</div>
-
-			<div class="subnav_content subnav_content-infinity">
-				<div class="title">Infinity</div>
-				<ul>
-					<li><a href="#">Обвес 11</a></li>
-					<li><a href="#">Обвес 12</a></li>
-					<li><a href="#">Обвес 13</a></li>
-					<li><a href="#">Обвес 14</a></li>
-				</ul>
-			</div>
-
-			<button class="close" type="button"></button>
 		</div>
 		<!-- =/subnav2 -->
 	</div>
@@ -299,7 +257,9 @@
 
 	<!-- InstanceEndEditable -->
 </div>
+<div id="outdated"></div>
 
+<script src="outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>

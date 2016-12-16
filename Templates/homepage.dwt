@@ -24,13 +24,14 @@
 	<link href="css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
+<!--[if !IE]><!-->
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
+<!--<![endif]-->
+
 <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!--[if (gte IE 5.5)&(lte IE 8)]>
-	<script type="text/javascript" src="js/selectivizr.js"></script>
-<![endif]-->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
 </head>
@@ -134,7 +135,9 @@
 	<!-- TemplateBeginEditable name="EditRegion3" -->
 	<!-- TemplateEndEditable -->
 </div>
+<div id="outdated"></div>
 
+<script src="../outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="../js/owl.carousel.min.js"></script>
 <script src="../js/slick.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
