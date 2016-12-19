@@ -261,6 +261,13 @@ $(document).ready(function(){
 		scrollButtons : {enable:true},
 		autoDraggerLength : true
 	});
+
+	$('#text-scroller').mCustomScrollbar({
+		scrollButtons : {enable:true},
+		autoDraggerLength : true
+	});
+
+
 	$('#card-scroller-desc').mCustomScrollbar();
 
 	$('#gallery-scroller').mCustomScrollbar({
