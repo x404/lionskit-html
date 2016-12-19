@@ -10,11 +10,16 @@ textarea{overflow:hidden}
 	display: block\9;
 }
 
+:root .text_page .content,
+:root .text_page .mainpic,
 :root .articles_page .content,
 :root .articles_page .entry{
 	float: left\9;
 }
 
+:root .text_page .mainpic{
+	min-height: 900px
+}
 
 :root .reviews_page .reviews_wrapper{
 	display: block\9;
@@ -39,4 +44,9 @@ textarea{overflow:hidden}
 
 :root .contacts_page .main .content{
 	min-height: 100vh\9;
+}
+
+
+
+:root .text_page .reviews_wrapper{
 }
