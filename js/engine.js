@@ -49,11 +49,14 @@ $(document).ready(function(){
 
 
 	$('.main').hover(function(){
-		$('body').removeClass('l-with-subnav1')
-		$('body').removeClass('l-with-subnav2')
+		$('body').removeClass('l-with-subnav1');
+		$('body').removeClass('l-with-subnav2');
+		$('.panel nav li.current').removeClass('current');
 	});
 
 
+
+	// carousels
 	$('#home_bg_slider').slick({
 		arrows : false,
 		dots: false,
@@ -62,7 +65,7 @@ $(document).ready(function(){
 		autoplaySpeed : 5000,
 		fade: true,
 		cssEase: 'linear'
-	})
+	});
 
 
 	$('#foo1').owlCarousel({
@@ -107,7 +110,7 @@ $(document).ready(function(){
 		if ($(this).find('.form-control').val().length > 0) {
 			return $(this).addClass('is-charged');
 		}		
-	})
+	});
 
 	$('body').on('focusin', '.input-field', function(e) {
 		return $(this).addClass('is-focused');
