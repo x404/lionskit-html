@@ -1,0 +1,186 @@
+.projects_page{
+	.main{
+		overflow: hidden;
+		.flex;
+		.content{
+			background: #141414 url(../images/bg-7.jpg) no-repeat center center / cover;
+			min-height: 100vh;
+			flex: 1;
+			&_wrapper{
+				padding: 5.5rem 10rem 0 7rem;
+			}
+
+			.prehead{
+				.font-size(2.1);
+				color: @color2;
+				font-family: 'MyriadProLightSemiExt';
+				margin-bottom: 1.5rem;
+				text-transform: uppercase;
+			}
+
+			main{
+				h1{
+					color: @color2;
+					margin-bottom: 2.4rem;
+				}
+				.font-size(1.7);
+				.regular;
+				color: @color13;
+				p{
+					line-height: 1.6;
+				}
+			}
+		}
+		.right{
+			.flex;
+			flex-flow: column;
+			width: 67rem;
+			.row{
+				.flex;
+				flex-grow: 1;
+				.cell{
+					width: 50%;
+					&-width2{
+						width: 100%;
+					}
+					&_wrapper{
+						flex: 1;
+						height: 100%;
+					}
+					&-content{
+						background-color: @color2;
+						font-family: 'MyriadProLightSemiExt';
+						color: @color31;
+						text-align: center;
+						.font-size(2.1);
+
+						.cell_wrapper{
+							.transition;
+							.transition-duration(.4s);
+							margin: 2rem;
+							border: 2px solid @color32;
+							padding: 3rem;
+							height: ~"calc(100% - 3.8rem)";
+						}
+						.button{
+							margin-top: 3rem;
+							border: 1px solid @color1;
+							.font-size(1.8);
+							&:before,
+							& > span{
+								padding: 1.6rem 2rem;
+							}
+							&:before{
+								padding-top: 1.7rem;
+							}
+						}
+						hr{
+							border: none;
+							border-top: 3px solid @color34;
+							width: 65px;
+							height: 3px;
+							margin-top: 3rem;
+							margin-bottom: 0;
+						}
+						.count{
+							.martabold;
+							.font-size(8);
+							color: @color30;
+							line-height: 1;
+							margin-top: 3.6rem;
+							margin-bottom: .5rem;
+							position: relative;
+							&:before{
+								margin-left: -90px;
+							}
+							&:after{
+								margin-left: 55px;
+							}
+							&:before,
+							&:after{
+								.before;
+								border-top: 2px solid @color33;
+								left: 50%;
+								position: absolute;
+								top: 40px;
+								width: 3.5rem;
+							}
+						}
+						p{
+							line-height: 1.4;
+						}
+
+
+						&:hover{
+							.cell_wrapper{
+								background-color: @color1;
+								border-color: @color1;
+								.count{
+									color: rgba(255, 255, 255, 0.89);
+								}
+								p:not(.count){
+									color: @color2;
+								}
+								.button{
+									border-color: @color2;
+									background-color: @color2;
+								}							
+							}
+						}
+					}
+				}
+			}
+			.row,
+			.cell{
+				position: relative;
+			}
+			img{
+				height: 100%;
+				vertical-align: top;
+			}
+		}
+
+		.advantages{
+			.regular;
+			.font-size(1.6);
+			color: @color13;
+			margin: 6.2rem -4.5rem 0;
+			.clear;
+			.cell{
+				float: left;
+				width: 33.3%;
+				padding-left: 4.5rem;
+				padding-right: 4.5rem;
+			}
+			.pic{
+				min-height: 100px;
+				position: relative;
+				img{
+					bottom: 0;
+					left: 0;					
+					position: absolute;
+				}
+			}
+			h4{
+				.font-size(2);
+				padding-top: 2.5rem;
+				font-family: 'MyriadProLightSemiExt';
+				font-weight: normal;
+				text-transform: uppercase;
+				position: relative;
+				&:after{
+					border-top: 1px solid @color12;
+					content: "";
+					display: block;
+					margin-bottom: 1.5rem;
+					margin-top: 2rem;
+					width: 27px;
+				}
+			}
+
+			p{
+				line-height: 1.4;
+			}
+		}
+	}
+}

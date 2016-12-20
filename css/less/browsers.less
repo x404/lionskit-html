@@ -1,0 +1,47 @@
+::-ms-clear {
+        display: none;
+}
+
+.ie10 .articles_page .main{
+	display: block;
+}
+
+.ie10 .articles_page .content,
+.ie10 .articles_page .entry{
+	float: left;
+}
+
+.ie10 .contacts_page .main .content{
+	min-height: 100vh;
+}
+
+
+// edge
+_:-ms-lang(x), 	.reviews_page .reviews_list .media{
+    display: table-cell;
+    min-height: 100vh;
+    vertical-align: middle;
+}
+
+_:-ms-lang(x), .contacts_page .main .content{
+	min-height: 100vh
+}
+
+
+/* Safari 10.0+ */
+_::-webkit-:host:not(:root:root),.feed{
+	height: 100vh;
+}
+
+_::-webkit-:host:not(:root:root),.contacts_page #map{
+	min-height: 850px;
+}
+
+
+_::-webkit-:host:not(:root:root),.reviews_page .reviews_list .media{
+	min-height: 100vh
+}
+
+
+
+

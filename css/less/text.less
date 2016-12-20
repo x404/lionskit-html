@@ -1,0 +1,56 @@
+.text_page{
+	.main{
+		.flex;
+		#text-scroller {
+			.mCSB_scrollTools{
+				bottom: 0;
+				right: 30px;
+				top: 0;
+			}
+			.mCSB_inside > .mCSB_container{
+				margin-right: 90px;
+			}
+		}
+	}
+	.content{
+		.font-size(1.8);
+		background-color: @color11;
+		padding-left: 10.8rem;
+		width: 50%;
+		padding-top: 11rem;
+		padding-bottom: 10rem;
+		position: relative;
+		z-index: 10;
+	}
+	main{
+		color: @color26;
+		.regular;
+		.text-elements;
+
+		ol, ul{
+			li{
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+			}
+		}
+
+		p{
+			line-height: 1.5;
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.mainpic{
+		background-repeat: no-repeat;
+		background-position: 55% center;
+		background-size: cover;
+		position: relative;
+		overflow: hidden;
+		width: 50%;
+		
+		img{
+			display: none;
+		}
+	}
+}

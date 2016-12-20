@@ -1,0 +1,151 @@
+.catalog_page{
+	@keyframes move {
+		from { left: 50%; }
+		to   { left: -40%; }
+	}
+
+	.main{
+		background-color: @color11;
+	}
+	.list_goods{
+		.intro{
+			background: url(../images/bg-8.jpg) no-repeat right bottom;
+			.flex;
+			.font-size(1.6);
+			.regular;
+			.flex-align-items(center);
+			color: @color13;
+			line-height: 1.4;
+			&_wrapper{
+				padding-right: 2.8rem;
+			}
+			.prehead{
+				.font-size(2.1);
+				color: @color2;
+				display: inline-block;
+				font-family: MyriadProLightSemiExt;
+				position: relative;
+				text-transform: uppercase;
+				&:after{
+					.before;
+					border-top: 1px solid @color2;
+					right: -55px;
+					top: 12px;
+					width: 43px;
+				}
+			}
+			.title{
+				.font-size(3);
+				.martabold;
+				color: @color2;
+				padding-bottom: 1.7rem;
+			}
+		}
+		.item{
+			.transition;
+			min-height: 450px;
+			padding-left: 3rem;
+			position: relative;
+			a{
+				display: block;
+				padding-top: 2.5rem;
+				text-decoration: none;
+			}
+			figure{
+				height: 100%;
+				left: 0;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 0;
+				&:before{
+					.before;
+					background-color: rgba(0, 0, 0, 0.5);
+					bottom: 0;
+					left: 0;
+					right: 0;
+					top: 0;
+					z-index: 1;
+				}
+				img{
+					.transition-param(opacity,.4s);
+					display: block !important;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					transform: translateX(-30%);
+					&.overlay-img{
+						opacity: 0;
+						will-change: opacity;
+					}
+				}
+			}
+			&_description{
+				.regular;
+				position: relative;
+				z-index: 1;
+			}
+			&_model{
+				.font-size(1.5);
+				color: @color35;
+				position: relative;
+				&:after{
+					margin-top: 1.4rem;
+					content: "";
+					border-top: 1px solid @color2;
+					display: block;
+					margin-bottom: 1rem;
+					width: 28px;
+				}
+			}
+			&_title{
+				.transition-param(color);
+				.font-size(3);
+				color: @color2;
+				font-family: MyriadProLightSemiExt;
+				line-height: 1;
+				padding-top: 1rem;
+			}
+			&_price{
+				.semibold;
+				.font-size(2.6);
+				color: @color17;
+				display: inline-block;
+			}
+			.asterisk{
+				.font-size(1.2);
+				display: inline-block;
+				line-height: 2.5;
+				margin-left: 1rem;
+				vertical-align: top;
+			}
+
+			&:hover{
+				&:not(.intro){
+					box-shadow: 0 0 25px rgba(0, 255, 240, 0.7);
+					z-index: 9;					
+				}
+				.item_title{
+					color: @color17;
+				}
+				img.overlay-img{
+					opacity: 1;
+					animation: move 8s linear;
+					animation-iteration-count:infinite;
+					-moz-animation-iteration-count:infinite;
+					-webkit-animation-iteration-count:infinite;	
+					animation-direction: alternate; 
+				}
+			}
+		}
+		.grid-item{
+			float: left;
+			width: 20%;
+		}
+		.grid-item--width2{
+			width: 40%;
+		}
+	}
+}
