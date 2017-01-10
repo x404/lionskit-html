@@ -1,8 +1,8 @@
 .catalog_page{
-	@keyframes move {
-		from { left: 50%; }
-		to   { left: -40%; }
-	}
+	// @keyframes move {
+	// 	from { left: 100%; }
+	// 	to   { left: 0%; }
+	// }
 
 	.main{
 		background-color: @color11;
@@ -72,10 +72,13 @@
 					.transition-param(opacity,.4s);
 					display: block !important;
 					height: 100%;
-					left: 0;
+					left: 50%;
 					position: absolute;
 					top: 0;
-					transform: translateX(-30%);
+					&:not(.overlay-img){
+						transform: translateX(-50%);						
+					}
+					// transform-origin: 0 0;
 					&.overlay-img{
 						opacity: 0;
 						will-change: opacity;
@@ -132,11 +135,12 @@
 				}
 				img.overlay-img{
 					opacity: 1;
-					animation: move 8s linear;
-					animation-iteration-count:infinite;
-					-moz-animation-iteration-count:infinite;
-					-webkit-animation-iteration-count:infinite;	
-					animation-direction: alternate; 
+					// animation: move 2s linear;
+					// animation-iteration-count:infinite;
+					// -moz-animation-iteration-count:infinite;
+					// -webkit-animation-iteration-count:infinite;	
+					// animation-direction: alternate; 
+					// animation-fill-mode: forwards;
 				}
 			}
 		}

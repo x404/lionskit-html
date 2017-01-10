@@ -105,6 +105,41 @@ $(document).ready(function(){
 	});
 
 
+	// catalog animations
+	function animate(){
+		var $this = $('.item.animate');
+		wf = $this.find('figure').width();
+		img = $this.find('.overlay-img'),
+		wimg = img.width();
+
+		var options = {
+			duration: 5000,
+			easing: 'linear'
+		};
+
+		ml = parseInt(wimg/2);
+		img.css('marginLeft', -ml);
+
+		d = parseInt((wimg - wf)/2);
+
+		img.animate({marginLeft : -ml+d}, options.duration, 'linear')
+		.animate({marginLeft : -ml}, options.duration, 'linear')
+		.animate({marginLeft : -ml-d}, options.duration, 'linear')
+		.animate({marginLeft : -ml}, options.duration, 'linear', function() {animate();}
+		)
+	}
+
+	$('.list_goods .item').hover(
+		function(){
+			$(this).addClass('animate');
+			animate();
+		},
+		function(){
+			$(this).removeClass('animate');
+			$(this).find('.overlay-img').stop(true);
+		}
+	);	
+
 	// inputs
 	$('#feedback_form .input-field').each(function(){
 		if ($(this).find('.form-control').val().length > 0) {
