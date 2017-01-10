@@ -130,6 +130,7 @@
 	will-change: left;
 	background-color: @color2;
 	.transition-param(left, .6s, cubic-bezier(.45,.035,.045,.95));
+	// .transition-param(left, .6s, linear);
 	.panelbase;
 	.title{
 		.martabold;
@@ -330,6 +331,7 @@
 			position: absolute;
 			text-overflow: ellipsis;
 			top: 23px;
+			// transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
 			transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
 			white-space: nowrap;
 			width: 100%;

@@ -122,7 +122,7 @@ $(document).ready(function(){
 
 		d = parseInt((wimg - wf)/2);
 
-		if (d<100) options.duration = 1500;
+		if (d<100) options.duration = 1200;
 
 		img.animate({marginLeft : -ml+d}, options.duration, 'linear')
 		.animate({marginLeft : -ml}, options.duration, 'linear')
