@@ -202,10 +202,6 @@
 			<div class="feed_wrapper">
 			<!-- =here instagram widget -->
 				<?php
-				if(!extension_loaded('curl')) 	die('inWidget required <b>cURL PHP extension</b>. Please, install it or ask your hosting provider.');
-
-				require_once 'inwidget/plugins/instagram-php-scraper/InstagramScraper.php';
-				require_once 'inwidget/plugins/unirest-php/Unirest.php';
 				require_once 'inwidget/inwidget.php';
 
 				$inWidget = new inWidget();
