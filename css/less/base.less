@@ -43,6 +43,8 @@ ul{list-style:none}
 @color38:#009c93;
 @color39:#9c0016;
 @color40:#efefef;
+@color41:#ff6400;
+@color42:#ffb04c;
 
 
 
@@ -283,7 +285,7 @@ input::-moz-focus-inner{
 
 .icon-instagram{
 	&:before{
-		background-position: 0 -22px;		
+		background-position: 0 -22px;
 		height: 18px;
 		width: 18px;
 		left: 10px;
@@ -295,24 +297,65 @@ input::-moz-focus-inner{
 		border-color: @color !important;
 		color: @color2;
 		&:before{
-			background-position: 0 -41px;			
+			background-position: 0 -41px;
 		}
 	}
 }
 
 
+.icon-f{
+	&:before{
+		background-position: 0 -156px;
+		height: 21px;
+		width: 14px;
+		left: 12px;
+		top: 9px;
+	}
+	&:hover{
+		@color: @color41;
+		background-color: @color;
+		border-color: @color !important;
+		color: @color2;
+		&:before{
+			background-position: 0 -179px;
+		}
+	}
+}
+
+
+.icon-d{
+	&:before{
+		background-position: -20px -156px;
+		height: 19px;
+		width: 10px;
+		left: 12px;
+		top: 9px;
+	}
+	&:hover{
+		@color: @color14;
+		background-color: @color;
+		border-color: @color !important;
+		color: @color2;
+		&:before{
+			background-position: -20px -179px;
+		}
+	}
+}
+
+
+
 .button {
-    backface-visibility: hidden;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: medium none;
-    color: inherit;
-    display: inline-block;
-    // max-width: 250px;
-    // min-width: 15rem;
-    padding: 2.2rem 3.8rem;
-    position: relative;
-    vertical-align: middle;
-    z-index: 1;
+	backface-visibility: hidden;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: medium none;
+	color: inherit;
+	display: inline-block;
+	// max-width: 250px;
+	// min-width: 15rem;
+	padding: 2.2rem 3.8rem;
+	position: relative;
+	vertical-align: middle;
+	z-index: 1;
 	text-decoration: none;
 	text-align: center;
 }
